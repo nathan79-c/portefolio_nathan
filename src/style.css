@@ -1,1 +1,272 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .nav-item {
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #dc2626;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-item:hover::after {
+            width: 100%;
+        }
+        
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .experience-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-portfolio {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-portfolio:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+        }
+        
+        .btn-hire {
+            transition: all 0.3s ease;
+            border: 2px solid #1e293b;
+        }
+        
+        .btn-hire:hover {
+            background: #1e293b;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .testimonial {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .testimonial::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -20px;
+            font-size: 80px;
+            color: #dc2626;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: #fee2e2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+        
+        .service-card:hover .service-icon i {
+            color: white;
+        }
+        
+        .service-icon i {
+            font-size: 36px;
+            color: #dc2626;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-section {
+            background: white;
+            padding: 100px 0;
+        }
+        
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .portfolio-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .portfolio-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: #dc2626;
+            border-radius: 2px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .portfolio-content {
+            padding: 25px;
+        }
+        
+        .portfolio-category {
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .portfolio-description {
+            margin: 20px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            color: #dc2626;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .portfolio-link i {
+            margin-left: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        .see-more-btn {
+            background: #1e293b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .see-more-btn:hover {
+            background: #dc2626;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .see-more-btn i {
+            margin-left: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-center {
+                display: none;
+            }
+            
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .content-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .portfolio-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .portfolio-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
