@@ -5,159 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan | Mobile & Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="src/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
-<body class="text-gray-800">
+<body>
     <!-- Navigation Bar -->
-    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Left Navigation -->
-            <div class="flex space-x-8">
-                <a href="#" class="nav-item text-red-600 font-medium">Home</a>
-                <a href="#" class="nav-item font-medium hover:text-red-600">About</a>
-                <a href="#service" class="nav-item font-medium hover:text-red-600">Service</a>
-            </div>
+    <header>
+        <div class="container nav-container">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <!-- Center Name -->
-            <div class="nav-center text-center">
-                <div class="flex items-center justify-center">
-                    <div class="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                        <span class="text-white font-bold text-xl">N</span>
-                    </div>
-                    <h1 class="text-2xl font-bold">Nathan</h1>
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <div class="logo-initial">
+                    <span>N</span>
                 </div>
-            </div>
+                <h1>Nathan</h1>
+            </a>
             
-            <!-- Right Navigation -->
-            <div class="flex space-x-8">
-                <a href="#" class="nav-item font-medium hover:text-red-600">Resume</a>
-                <a href="#portfolio" class="nav-item font-medium hover:text-red-600">Project</a>
-                <a href="#" class="nav-item font-medium hover:text-red-600">Contact</a>
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#service">Service</a>
+                <a href="#">Resume</a>
+                <a href="#portfolio">Project</a>
+                <a href="#">Contact</a>
             </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#service">Service</a>
+            <a href="#">Resume</a>
+            <a href="#portfolio">Project</a>
+            <a href="#">Contact</a>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow">
-        <!-- Heading Section -->
-        <div class="text-center mb-16">
-            <p class="text-red-600 text-xl mb-4">Hello!</p>
-            <h1 class="text-4xl md:text-6xl font-bold mb-8">
-                I'm <span class="text-red-600">Nathan</span>, <br>
-                Android Developer
-            </h1>
-        </div>
-            
-            <!-- Image Section -->
-            <div class="flex justify-center mb-16">
-                <div class="profile-image rounded-full overflow-hidden">
-                    <img src="img/nathanpng.png" 
-                         alt="Nathan" 
-                         class="w-full h-full object-cover">
-                </div>
-            </div>
-            
-            <!-- Content Section -->
-            <div class="flex flex-wrap justify-between items-start content-section mb-16">
-                <!-- Left: Presentation -->
-                <div class="w-full md:w-5/12 mb-12 md:mb-0">
-                    <div class="testimonial text-gray-600 text-lg italic mb-8">
-                        "Nathan's mobile development expertise transformed our app into a sleek, high-performance platform. His attention to detail and innovative solutions delivered beyond our expectations. Highly recommended for complex mobile projects!"
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <p class="hero-subtitle">Hello!</p>
+                <h1 class="hero-title">
+                    I'm <span>Nathan</span>, <br>
+                    Android Developer
+                </h1>
+                
+                <!-- Profile Image -->
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="img/me.png" 
+                             alt="Nathan">
                     </div>
-                    <div class="flex space-x-4">
-                        <button class="btn-portfolio text-white px-8 py-3 rounded-full font-semibold">
-                            <a href="#portfolio" class="text-white no-underline"> Portfolio <i class="fas fa-arrow-up-right-from-square ml-2"></i></a>
-                        </button>
-                        <button class="btn-hire px-8 py-3 rounded-full font-semibold">
-                            <a href="src/file/Nathan resume .pdf" download>Hire Me</a>
-                        </button>
-                    </div>
-                   
                 </div>
                 
-                <!-- Right: Experience -->
-                <div class="w-full md:w-5/12">
-                    <div class="experience-card">
-                        <h3 class="text-xl font-bold mb-4">Professional Experience</h3>
-                        
-                        <div class="flex items-center mb-6">
-                            <div class="text-red-600 text-2xl mr-4">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div>
-                                <p class="text-3xl font-bold">More Years</p>
-                                <p class="text-gray-600">Development Experience</p>
-                            </div>
+                <!-- Content Section -->
+                <div class="content-section">
+                    <div class="presentation">
+                        <div class="testimonial">
+                            "Nathan's mobile development expertise transformed our app into a sleek, high-performance platform. His attention to detail and innovative solutions delivered beyond our expectations. Highly recommended for complex mobile projects!"
                         </div>
-                        
-                        <div class="grid grid-cols-2 gap-4 mt-8">
-                            <div class="bg-red-50 p-4 rounded-lg">
-                                <div class="text-red-600 text-3xl mb-2">
-                                    <i class="fas fa-mobile-screen"></i>
+                        <div class="btn-group">
+                            <a href="#portfolio" class="btn btn-portfolio">
+                                Portfolio <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+                            </a>
+                            <a href="src/file/Nathan resume .pdf" download class="btn btn-hire">
+                                Hire Me
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Section -->
+                    <div class="experience">
+                        <div class="experience-card">
+                            <h3>Professional Experience</h3>
+                            
+                            <div class="experience-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
-                                <p class="font-semibold">Mobile Apps</p>
-                                <p class="text-sm text-gray-600">Android & iOS</p>
+                                <div>
+                                    <p class="experience-years">5+ Years</p>
+                                    <p class="text-gray-600">Development Experience</p>
+                                </div>
                             </div>
                             
-                            <div class="bg-red-50 p-4 rounded-lg">
-                                <div class="text-red-600 text-3xl mb-2">
-                                    <i class="fas fa-globe"></i>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-mobile-screen"></i>
+                                    </div>
+                                    <p>Mobile Apps</p>
+                                    <span>Android & iOS</span>
                                 </div>
-                                <p class="font-semibold">Web Apps</p>
-                                <p class="text-sm text-gray-600">React & Vue</p>
-                            </div>
-                            
-                            <div class="bg-red-50 p-4 rounded-lg">
-                                <div class="text-red-600 text-3xl mb-2">
-                                    <i class="fas fa-database"></i>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <p>Web Apps</p>
+                                    <span>React & Vue</span>
                                 </div>
-                                <p class="font-semibold">Backend</p>
-                                <p class="text-sm text-gray-600">Python & PHP</p>
-                            </div>
-                            
-                            <div class="bg-red-50 p-4 rounded-lg">
-                                <div class="text-red-600 text-3xl mb-2">
-                                    <i class="fas fa-cloud"></i>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <p>Backend</p>
+                                    <span>Python & PHP</span>
                                 </div>
-                                <p class="font-semibold">Cloud</p>
-                                <p class="text-sm text-gray-600">Firebase & Google Cloud</p>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <p>Cloud</p>
+                                    <span>Firebase & Google Cloud</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         
         <!-- Services Section -->
-        <section class="py-16 bg-white" id="service">
-            <div class="container mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-4xl font-bold mb-4">My Services</h2>
-                    <p class="text-gray-600 text-lg">
+        <section class="section" id="service">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Services</h2>
+                    <p>
                         I specialize in creating high-quality mobile and web solutions that help businesses grow and succeed in the digital world.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" >
+                <div class="services-grid">
                     <!-- Service 1: Mobile Development -->
-                    <div class="service-card" >
+                    <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3">Mobile Applications</h3>
-                        <p class="text-gray-600 mb-6">
+                        <h3>Mobile Applications</h3>
+                        <p>
                             Professional mobile app development for Android platforms using modern technologies Kotlin and Firebase.
                         </p>
-                        <div class="mt-auto">
-                            <a href="#" class="text-red-600 font-semibold hover:underline">
-                                Learn More <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+                        <a href="#" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                     
                     <!-- Service 2: Frontend Development -->
@@ -165,15 +170,13 @@
                         <div class="service-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3">Frontend Development</h3>
-                        <p class="text-gray-600 mb-6">
+                        <h3>Frontend Development</h3>
+                        <p>
                             Building responsive and interactive user interfaces with modern frameworks like Html, js, and Talwind Css.
                         </p>
-                        <div class="mt-auto">
-                            <a href="#" class="text-red-600 font-semibold hover:underline">
-                                Learn More <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+                        <a href="#" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                     
                     <!-- Service 3: Backend Development -->
@@ -181,15 +184,13 @@
                         <div class="service-icon">
                             <i class="fas fa-server"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3">Backend Development</h3>
-                        <p class="text-gray-600 mb-6">
+                        <h3>Backend Development</h3>
+                        <p>
                             Robust server-side development, RESTful APIs, and database management with Python, Php, and Mysql.
                         </p>
-                        <div class="mt-auto">
-                            <a href="#" class="text-red-600 font-semibold hover:underline">
-                                Learn More <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+                        <a href="#" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -197,7 +198,7 @@
         
         <!-- Portfolio Section -->
         <section class="portfolio-section" id="portfolio">
-            <div class="container mx-auto px-4">
+            <div class="container">
                 <div class="portfolio-header">
                     <h2 class="portfolio-title">Let's Have a Look at my Portfolio</h2>
                     <a href="#" class="see-more-btn">
@@ -205,7 +206,7 @@
                     </a>
                 </div>
                 
-                <div class="portfolio-grid">
+                <div class="portfolio-cards">
                     <!-- Project 1: Food Delivery App -->
                     <div class="portfolio-card">
                         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
@@ -213,7 +214,7 @@
                              class="portfolio-img">
                         <div class="portfolio-content">
                             <span class="portfolio-category">Mobile App Development</span>
-                            <h3 class="text-2xl font-bold">Food Express</h3>
+                            <h3>Food Express</h3>
                             <p class="portfolio-description">
                                 A food delivery solution that connects restaurants with customers. Features include real-time tracking, in-app payments, and personalized recommendations.
                             </p>
@@ -230,7 +231,7 @@
                              class="portfolio-img">
                         <div class="portfolio-content">
                             <span class="portfolio-category">Web Development</span>
-                            <h3 class="text-2xl font-bold">DXB-Everest</h3>
+                            <h3>DXB-Everest</h3>
                             <p class="portfolio-description">
                                 A full-featured e-commerce platform with product management, shopping cart, secure checkout, and customer analytics dashboard.
                             </p>
@@ -247,7 +248,7 @@
                              class="portfolio-img">
                         <div class="portfolio-content">
                             <span class="portfolio-category">Mobile & Web App</span>
-                            <h3 class="text-2xl font-bold">FitTrack Pro</h3>
+                            <h3>FitTrack Pro</h3>
                             <p class="portfolio-description">
                                 A comprehensive fitness tracking application with workout planning, nutrition tracking, progress visualization, and social sharing features.
                             </p>
@@ -262,16 +263,48 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://github.com/nathan79-c" class="text-xl hover:text-red-600"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/nathan-kayumba-a5a02b19b/" class="text-xl hover:text-red-600"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/kayumba_nathan" class="text-xl hover:text-red-600"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-xl hover:text-red-600"><i class="fab fa-instagram"></i></a>
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/nathan79-c"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nathan-kayumba-a5a02b19b/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/kayumba_nathan"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="text-gray-400">© 2023 Nathan. All rights reserved. | Mobile & Web Developer</p>
+            <p class="copyright">© 2023 Nathan. All rights reserved. | Mobile & Web Developer</p>
         </div>
     </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.mobile-nav').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
